@@ -19,4 +19,9 @@ dependencies {
 
     // Shimmer
     implementation "com.facebook.shimmer:shimmer:0.5.0"
+
+    // Paging
+    implementation "androidx.paging:paging-runtime-ktx:3.1.1"
+    implementation "androidx.room:room-paging:2.5.1"
+    implementation "androidx.paging:paging-compose:1.0.0-alpha20"
 }
