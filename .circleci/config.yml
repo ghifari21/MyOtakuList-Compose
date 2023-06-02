@@ -11,8 +11,11 @@ jobs:
       - restore_cache:
           key: android-orb-v1-
       - run:
+          name: Check JDK installation
+          command: ls /usr/local/openjdk-17
+      - run:
           name: Set JDK to 17
-          command: echo 'export JAVA_HOME=/usr/local/openjdk-17' >> $BASH_ENV && source $BASH_ENV
+          command: echo 'export JAVA_HOME=/usr/lib/jvm/java-17-openjdk' >> $BASH_ENV && source $BASH_ENV
       - run:
           name: Chmod permissions
           command: sudo chmod +x ./gradlew
